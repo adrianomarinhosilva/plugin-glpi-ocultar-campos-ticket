@@ -1,7 +1,19 @@
 <?php
 include ("../../../inc/includes.php");
-$plugin = new Plugin();
-if (!$plugin->isActivated("hideticketfields")) {
-   Html::displayRightError();
+
+// Check if user has rights
+Session::checkRight("config", UPDATE);
+
+// Display header
+Html::header('Hide Ticket Fields', $_SERVER['PHP_SELF'], "config", "plugins");
+
+$config = new PluginHideticketfieldsConfig();
+
+if (isset($_POST["update"])) {
+   $config->update($_POST);
+   Html::back();
 }
-Html::redirect($CFG_GLPI["root_doc"]."/front/config.form.php");
+
+$config->display(['id' => 1]);
+
+Html::footer();
