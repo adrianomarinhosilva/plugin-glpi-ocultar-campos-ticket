@@ -1,0 +1,16 @@
+{
+    "name": "adrianomarinho/hideticketfields",
+    "description": "GLPI plugin to hide urgency, impact and priority fields from ticket interface",
+    "version": "1.0.0",
+    "homepage": "https://github.com/malakaygames",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Adriano Marinho",
+            "homepage": "https://github.com/malakaygames"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    }
+}
