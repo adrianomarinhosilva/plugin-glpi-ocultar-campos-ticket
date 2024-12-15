@@ -1,57 +1,32 @@
 /**
- * Plugin Hide Ticket Fields - CSS file
+ * Hide Ticket Fields Plugin CSS
  * @author Adriano Marinho
- * @link https://github.com/malakaygames
  */
 
-/* Hide urgency field and container */
-div.form-field.row.col-12.mb-2:has(label[for="urgency_113926324"]),
-div.col-xxl-8.field-container:has(select[name="urgency"]),
-select[id="dropdown_urgency113926324"],
-label[for="urgency_113926324"] {
+/* Urgency field hiding rules */
+.hide-urgency div.form-field.row:has(select[name="urgency"]),
+.hide-urgency div.form-field.row:has(label[for*="urgency"]),
+.hide-urgency .select2-container:has(select[name="urgency"]) {
     display: none !important;
 }
 
-/* Hide impact field and container */
-div.form-field.row.col-12.mb-2:has(label[for="impact_113926324"]),
-div.col-xxl-8.field-container:has(select[name="impact"]),
-select[id="dropdown_impact113926324"],
-label[for="impact_113926324"] {
+/* Impact field hiding rules */
+.hide-impact div.form-field.row:has(select[name="impact"]),
+.hide-impact div.form-field.row:has(label[for*="impact"]),
+.hide-impact .select2-container:has(select[name="impact"]) {
     display: none !important;
 }
 
-/* Hide priority field and container */
-div.form-field.row.col-12.mb-2:has(label[for="priority_113926324"]),
-div.col-xxl-8.field-container:has(select[name="priority"]),
-select[id="dropdown_priority113926324"],
-label[for="priority_113926324"] {
+/* Priority field hiding rules */
+.hide-priority div.form-field.row:has(select[name="priority"]),
+.hide-priority div.form-field.row:has(label[for*="priority"]),
+.hide-priority .select2-container:has(select[name="priority"]) {
     display: none !important;
 }
 
-/* Hide select2 containers */
-span.select2-container:has(select[name="urgency"]),
-span.select2-container:has(select[name="impact"]),
-span.select2-container:has(select[name="priority"]) {
-    display: none !important;
-}
-
-/* Hide the entire form fields */
-div.form-field.row.col-12.mb-2:has([data-select2-id*="urgency"]),
-div.form-field.row.col-12.mb-2:has([data-select2-id*="impact"]),
-div.form-field.row.col-12.mb-2:has([data-select2-id*="priority"]) {
-    display: none !important;
-}
-
-/* Additional selectors for dynamically generated elements */
-[data-select2-id*="urgency"],
-[data-select2-id*="impact"],
-[data-select2-id*="priority"] {
-    display: none !important;
-}
-
-/* Hide entire row containers */
-.select2-hidden-accessible[name="urgency"],
-.select2-hidden-accessible[name="impact"],
-.select2-hidden-accessible[name="priority"] {
+/* Request Source field hiding rules */
+.hide-source div.form-field.row:has(select[name="requesttypes_id"]),
+.hide-source div.form-field.row:has(label[for*="requesttypes_id"]),
+.hide-source .select2-container:has(select[name="requesttypes_id"]) {
     display: none !important;
 }
